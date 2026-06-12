@@ -16,14 +16,21 @@
 
   /* ---------- journey timeline ---------- */
   var journey = [
-    { year: "2012", title: "First lines of Pimcore", text: "Starts working with Pimcore and goes self-employed as a Pimcore consultant and developer — the foundation for everything that follows." },
+    { year: "2012", title: "First lines of Pimcore", text: "Starts working with Pimcore — the foundation for everything that follows." },
+    { year: "2013", title: "Going self-employed", text: "Becomes a self-employed Pimcore consultant and developer, turning a passion into a profession." },
     { year: "2015", title: "CoreShop is born", text: "Starts CoreShop with a simple vision: make e-commerce with Pimcore great and fun. A side project becomes a platform businesses run on." },
     { year: "2018", title: "First-ever Most Valuable Pimconaut", text: "Pimcore introduces the MVP award — and hands the first one ever to Dominik, honoring years of contributions to the ecosystem.", accent: true },
     { year: "2021", title: "CORS GmbH is founded", text: "From solo consultant to company builder: CORS focuses on the most modern and advanced Pimcore projects — partnerships instead of billable hours." },
-    { year: "2025", title: "Studionaut of the Year", text: "Awarded Pimcore Studionaut of the Year — and busy with more new ideas and ventures than ever. To be continued.", accent: true }
+    { year: "2021", title: "CoreShop GmbH is founded", text: "CoreShop gets its own company — the home for the open-code e-commerce platform and the businesses that run on it." },
+    { year: "2021", title: "Part of the E-CONOMIX Group", text: "CORS becomes part of the E-CONOMIX Group, bringing Pimcore expertise into a larger digital ecosystem." },
+    { year: "2025", title: "Studionaut of the Year", text: "Awarded Pimcore Studionaut of the Year — recognition for years of work in the ecosystem.", accent: true },
+    { year: "2026", title: "Co-founder of Mamado GmbH", text: "Co-founds Mamado GmbH — a new venture taking shape beyond the Pimcore world." },
+    { year: "2026", title: "Amber Fitness", text: "An AI-powered calorie and training tracking app for iOS — with an AI coach at its core — starts to take form." },
+    { year: "2026", title: "Captain ⎈", text: "A full Kubernetes client for iOS: multi-cluster, live logs, Helm, GitOps and native cloud auth, right from your phone." }
   ];
   var timeline = document.getElementById("timeline");
   if (timeline) {
+    var prevYear = null;
     journey.forEach(function (step, i) {
       var li = document.createElement("li");
       li.className = "timeline__item";
@@ -31,7 +38,9 @@
       var year = document.createElement("span");
       year.className = "timeline__year";
       year.style.color = step.accent ? "var(--accent)" : "rgba(255,255,255,0.92)";
-      year.textContent = step.year;
+      // show the year once per group; blank it on consecutive repeats
+      year.textContent = step.year === prevYear ? "" : step.year;
+      prevYear = step.year;
       var body = document.createElement("div");
       body.className = "timeline__body";
       var h3 = document.createElement("h3");
