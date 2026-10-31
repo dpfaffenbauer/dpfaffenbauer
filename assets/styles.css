@@ -312,6 +312,10 @@ strong { font-weight: 600; }
 .venture__name { font-family: var(--display); font-weight: 800; font-size: 24px; }
 .venture__link { font-size: 13px; font-weight: 600; color: var(--accent); white-space: nowrap; }
 .venture__text { font-size: 15px; line-height: 1.6; color: var(--muted); text-wrap: pretty; flex-grow: 1; }
+.venture__status { display: flex; flex-wrap: wrap; gap: 8px; }
+.venture--wide { grid-column: 1 / -1; }
+.venture--wide .venture__text { max-width: 760px; }
+.venture--static:hover { transform: none; border-color: var(--border); box-shadow: none; }
 
 /* ───────── engineer ───────── */
 .engineer { padding: clamp(72px, 9vw, 130px) var(--pad); background: #fff; }
@@ -367,6 +371,7 @@ strong { font-weight: 600; }
   color: var(--accent);
   white-space: nowrap;
 }
+.badge-pill--solid { background: var(--accent); color: #fff; }
 
 .k8s {
   display: flex;
