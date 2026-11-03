@@ -26,7 +26,8 @@
     { year: "2025", title: "Studionaut of the Year", text: "Awarded Pimcore Studionaut of the Year — recognition for years of work in the ecosystem.", accent: true },
     { year: "2026", title: "Co-founder of Mamado GmbH", text: "Co-founds Mamado GmbH — a new venture taking shape beyond the Pimcore world." },
     { year: "2026", title: "Amber Fitness", text: "An AI-powered calorie and training tracking app for iOS — with an AI coach at its core — starts to take form." },
-    { year: "2026", title: "Captain ⎈", text: "A full Kubernetes client for iOS: multi-cluster, live logs, Helm, GitOps and native cloud auth, right from your phone." }
+    { year: "2026", title: "Captain ⎈", text: "A full Kubernetes client for iOS: multi-cluster, live logs, Helm, GitOps and native cloud auth, right from your phone." },
+    { year: "2026", title: "OpenArch", text: "An open-source, Chromium-based browser for macOS in the spirit of Arc. The desktop app is out — a companion for iPhone and iPad is on its way." }
   ];
   var timeline = document.getElementById("timeline");
   if (timeline) {
